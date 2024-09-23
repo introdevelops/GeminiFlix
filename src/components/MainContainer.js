@@ -36,7 +36,7 @@ const MainContainer = () => {
     }, [mainMovie]);
 
     if (!mainMovie) {
-        return <div className='h-[700px] w-screen bg-black'></div>;
+        return <div className='h-[700px] w-[100%] bg-black overflow-hidden'></div>;
     }
 
     const { original_title, overview, id } = mainMovie;

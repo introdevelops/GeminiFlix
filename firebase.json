@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "netflix-clone-353",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

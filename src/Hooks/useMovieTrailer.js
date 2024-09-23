@@ -1,17 +1,18 @@
 
-import {GOOGLE_API_KEY } from "../utils/constants";
+
 
 
 
 
 const useMovieTrailer =() =>{
 
-   
+  const API_KEY=process.env.REACT_APP_GOOGLE_API_KEY; 
+
     const getMovieTrailer = async (movieName) => {
       console.log("inside useMovietrailer :"+ movieName);
       try {
         const response = await fetch(
-          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${encodeURIComponent(movieName + ' trailer')}&key=${GOOGLE_API_KEY}`
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${encodeURIComponent(movieName + ' trailer')}&key=${API_KEY}`
         
         );
         const data = await response.json();

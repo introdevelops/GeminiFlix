@@ -7,8 +7,9 @@ const useGenerateContent = () => {
 
   const generateContent = async (searchText) => {
     try {
+   
       console.log(searchText);
-      const genAI = new GoogleGenerativeAI('AIzaSyBPmoZEHR6qSrwyG9NFdSjXslKIIoAomGQ');
+      const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_KEY);
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
       
       const prompt = `As a recommendation system, recommend me at most 20 movies in hindi and english according to this query: '${searchText}' in the form of an array of strings of recommended movies without JSON delimiters. Example format: ["Sholay","Masti","Andaz Apna Apna","Hera Pheri","Welcome"].
